@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+	<meta charset="utf-8">
+	<title>Консультация</title>
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" type="text/css" href="static/css/styles.css">
+</head>
+
+<body class="hidden--loader">
+	<div class="loader">
+		<div class="loader__items"><span class="loader__circle loader__circle--1"></span><span
+				class="loader__circle loader__circle--2"></span><span class="loader__circle loader__circle--3"></span><span
+				class="loader__circle loader__circle--4"></span><span class="loader__circle loader__circle--5"></span><span
+				class="loader__circle loader__circle--6"></span><span class="loader__circle loader__circle--7"></span><span
+				class="loader__circle loader__circle--8"></span></div>
+	</div>
+	<div class="wrapper">
+		<header class="header header--green">
+			<div class="container">
+				<div class="header__inner">
+					<div class="logo"><a class="logo__link" href="index.html"><img class="logo__image"
+								src="static/images/common/logo.svg" alt="Логотип"></a></div>
+					<nav class="header__menu menu">
+						<ul class="menu__list">
+							<li class="menu__item"><a class="menu__link" href="#">Компания</a></li>
+							<li class="menu__item"><a class="menu__link" href="#">Вопросы</a></li>
+							<li class="menu__item"><a class="menu__link" href="#">Юристы</a></li>
+							<li class="menu__item menu__item--icon"><a class="menu__link" href="#">Разделы</a><svg
+									class="icon icon-arrow-down menu__item-icon">
+									<use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+								</svg>
+								<div class="menu__dropdown" data-da="header__menu, first, 1100">
+									<div class="menu__dropdown-row">
+										<div class="menu__dropdown-col">
+											<ul class="menu__dropdown-list">
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-info menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#info"></use>
+														</svg><span class="menu__dropdown-text">Компания</span></a></li>
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-law menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#law"></use>
+														</svg><span class="menu__dropdown-text">Темы права</span></a></li>
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-law-book menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#law-book"></use>
+														</svg><span class="menu__dropdown-text">Юридические услуги</span></a></li>
+											</ul>
+										</div>
+										<div class="menu__dropdown-col">
+											<ul class="menu__dropdown-list">
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-question menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#question"></use>
+														</svg><span class="menu__dropdown-text">Все вопросы</span></a></li>
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-paid-questions menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#paid-questions">
+															</use>
+														</svg><span class="menu__dropdown-text">Платные вопросы</span></a></li>
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-free-questions menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#free-questions">
+															</use>
+														</svg><span class="menu__dropdown-text">Бесплатные вопросы</span></a></li>
+											</ul>
+										</div>
+										<div class="menu__dropdown-col">
+											<ul class="menu__dropdown-list">
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-publications menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#publications">
+															</use>
+														</svg><span class="menu__dropdown-text">Публикации</span></a></li>
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-company menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#company"></use>
+														</svg><span class="menu__dropdown-text">Гос. учреждения</span></a></li>
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-document menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#document"></use>
+														</svg><span class="menu__dropdown-text">Образцы документов</span></a></li>
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-checked menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#checked"></use>
+														</svg><span class="menu__dropdown-text">Проверка контрагента</span></a></li>
+												<li class="menu__dropdown-item"><a class="menu__dropdown-link" href="#"><svg
+															class="icon icon-courthouse menu__dropdown-icon">
+															<use xlink:href="static/images/sprite/symbol/sprite.svg#courthouse"></use>
+														</svg><span class="menu__dropdown-text">Юридические компании</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__info">
+						<div class="header__phone"><span class="header__phone-text">Бесплатная горячая линия</span><a
+								class="header__phone-link" href="tel:+74954077755"><svg
+									class="icon icon-phone header__phone-icon">
+									<use xlink:href="static/images/sprite/symbol/sprite.svg#phone"></use>
+								</svg>+7 (495) 40-777-55</a></div>
+						<div class="header__icons">
+							<div class="header__user"><button class="header__user-btn" type="button"><svg
+										class="icon icon-user header__user-icon">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#user"></use>
+									</svg></button>
+								<div class="header__user-dropdown"><a class="header__user-link" href="#">Личный кабинет</a><a
+										class="header__user-link" href="#">Профиль</a><a class="header__user-link"
+										href="#">Чат</a><a class="header__user-link" href="#">Написать</a><a
+										class="header__user-link" href="#">Избранное</a><a class="header__user-link"
+										href="#">Выйти</a></div>
+							</div>
+							<div class="header__search"><button class="header__search-btn"><svg
+										class="icon icon-search header__search-icon">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+									</svg></button>
+								<div class="header__search-dropdown">
+									<form class="header__search-form" action="#"><input class="header__search-input" type="text"
+											placeholder="Поиск на сайте" required></form>
+								</div>
+							</div>
+						</div>
+						<div class="header__question"><a class="header__link btn btn--color-green btn--bg-white"
+								href="faq-asked.html"><svg class="icon icon-question-mark btn-icon btn-icon--color-green">
+									<use xlink:href="static/images/sprite/symbol/sprite.svg#question-mark"></use>
+								</svg>Задать вопрос</a>
+							<div class="header__question-dropdown"><a class="header__question-link"
+									href="faq-consultation.html"><svg class="icon icon-phone header__question-icon">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#phone"></use>
+									</svg>Консультация</a><a class="header__question-link" href="faq-document.html"><svg
+										class="icon icon-document-light header__question-icon">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#document-light"></use>
+									</svg>Документ</a></div>
+						</div>
+					</div><button class="burger burger-slip"><span class="burger-lines"></span></button>
+				</div>
+			</div>
+		</header>
+		<div class="content">
+			<section class="portfolio" data-bg="static/images/content/consult/portfolio-bg.jpg"
+				data-bg-webp="static/images/content/consult/portfolio-bg.webp">
+				<div class="container">
+					<div class="portfolio__inner">
+						<div class="portfolio__box">
+							<div class="portfolio__preview">
+								<picture>
+									<source srcset="static/images/content/consult/portfolio-avatar.webp" type="image/webp" />
+									<source srcset="static/images/content/consult/portfolio-avatar.jpg" type="image/jpg" /><img
+										class="portfolio__preview-image object-fit"
+										src="static/images/content/consult/portfolio-avatar.jpg" alt="portfolio-avatar" />
+								</picture><span class="portfolio__location"><svg class="icon icon-pin ">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#pin"></use>
+									</svg>г. Москва</span>
+							</div>
+							<div class="portfolio__icons"><a class="portfolio__icons-link" href="#"><svg
+										class="icon icon-question-mark ">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#question-mark"></use>
+									</svg></a><a class="portfolio__icons-link" href="#"><svg class="icon icon-message ">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#message"></use>
+									</svg></a><a class="portfolio__icons-link" href="#"><svg class="icon icon-chat ">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#chat"></use>
+									</svg></a></div>
+						</div>
+						<div class="portfolio__content">
+							<h2 class="portfolio__title title title--size-small"><span>Юрист</span> Артемьев Ярослав</h2>
+							<div class="portfolio__info content-info box-shadow">
+								<p>Судебная практика <strong>16 лет.</strong> Специализируюсь на: жилищных, семейных, трудовых
+									спорах. Также в сфере интересов, земельное право и градостроительство. Специализируюсь на:
+									жилищных, семейных, трудовых спорах. Также в сфере интересов, земельное право и
+									градостроительство. Специализируюсь на: жилищных, семейных, трудовых спорах. Также в сфере
+									интересов, земельное право и градостроительство. Специализируюсь на: жилищных, семейных,
+									трудовых спорах. Также в сфере интересов, земельное право и градостроительство.
+									Специализируюсь на: жилищных, семейных, трудовых спорах. Также в сфере интересов, земельное
+									право и градостроительство.</p>
+							</div>
+							<div class="portfolio__services box-shadow">
+								<div class="portfolio__services-content content-info">
+									<ul>
+										<li>консультации</li>
+										<li>составление документов</li>
+										<li>семейное право</li>
+										<li>представительство по уголовным и гражданским делам</li>
+										<li>сопровождение сделок</li>
+									</ul>
+								</div>
+								<div class="price portfolio__price">от <strong> 100 </strong> р.</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__items">
+						<div class="portfolio__item item-portfolio ">
+							<div class="item-portfolio__column item-portfolio__column_center">
+								<div class="item-portfolio__year">1980 <span>год</span></div>
+							</div>
+							<div class="item-portfolio__column">
+								<div class="item-portfolio__content">
+									<div class="item-portfolio__place">Москва, Россия</div>
+									<div class="item-portfolio__name"><span>ВУЗ</span> Государственный Харьковский педагогический
+										университет им. Г.С. Сковороды</div>
+									<div class="item-portfolio__specialization"><span>Факультет</span> Юридический</div>
+								</div>
+								<div class="item-portfolio__line"><svg width="48" height="116" viewBox="0 0 48 116" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M1 2C17.9915 9.93687 46 24.7348 46 44.005C46 64.7697 0.592138 107.309 11.4749 114"
+											stroke="#17BA9B" stroke-width="3" stroke-dasharray="20 20" />
+									</svg></div>
+							</div>
+						</div>
+						<div class="portfolio__item item-portfolio ">
+							<div class="item-portfolio__column item-portfolio__column_center">
+								<div class="item-portfolio__year">2002 <span>год</span></div>
+							</div>
+							<div class="item-portfolio__column">
+								<div class="item-portfolio__content">
+									<div class="item-portfolio__place">Москва, Россия</div>
+									<div class="item-portfolio__name"><span>Курсы</span> Название курсов</div>
+									<div class="item-portfolio__specialization"><span>Специальность</span> Юридический</div>
+								</div>
+								<div class="item-portfolio__line"><svg width="48" height="116" viewBox="0 0 48 116" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M1 2C17.9915 9.93687 46 24.7348 46 44.005C46 64.7697 0.592138 107.309 11.4749 114"
+											stroke="#17BA9B" stroke-width="3" stroke-dasharray="20 20" />
+									</svg></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="consult-chat">
+				<div class="consult-chat__bg" data-bg="static/images/content/consult/consult-bg.png"
+					data-bg-webp="static/images/content/consult/consult-bg.webp">
+					<picture>
+						<source srcset="static/images/content/consult/decor.webp" type="image/webp" />
+						<source srcset="static/images/content/consult/decor.png" type="image/png" /><img
+							class="consult-chat__decor" src="static/images/content/consult/decor.png" alt="decor" />
+					</picture>
+					<div class="container">
+						<div class="consult-chat__container">
+							<div class="consult-chat__items">
+								<div class="consult-chat__item"><strong class="consult-chat__number"
+										data-number="207">0</strong><span>ответов</span></div>
+								<div class="consult-chat__item"><strong class="consult-chat__number"
+										data-number="6">0</strong><span>консультаций</span></div>
+								<div class="consult-chat__item"><strong class="consult-chat__number"
+										data-number="0">0</strong><span>документов</span></div>
+							</div>
+							<div class="consult-chat__content content-info">
+								<h2>Консультируйтесь с юристом online</h2>
+								<p>Задайте вопрос прямо сейчас, и его увидят сотни профессионалов со всей России. Первый ответ
+									вы получите уже через <b>15 минут</b>! <br>Юридическая помощь предоставляется на бесплатной и
+									платной основе.</p>
+							</div>
+							<div class="consult-chat__box" data-da="consult-chat, last, 880">
+								<div class="consult-chat__statistics">
+									<div class="consult-chat__statistic"><svg class="icon icon-clock ">
+											<use xlink:href="static/images/sprite/symbol/sprite.svg#clock"></use>
+										</svg><strong data-number="15" data-separator="минут">0</strong><span>время ответа</span>
+									</div>
+									<div class="consult-chat__statistic"><svg class="icon icon-phone-border ">
+											<use xlink:href="static/images/sprite/symbol/sprite.svg#phone-border"></use>
+										</svg><strong data-number="89">0</strong><span>консультаций сегодня</span></div>
+									<div class="consult-chat__statistic consult-chat__statistic--small"><svg
+											class="icon icon-clients ">
+											<use xlink:href="static/images/sprite/symbol/sprite.svg#clients"></use>
+										</svg><strong data-number="98" data-separator="%">0</strong><span>довольных
+											клиентов</span></div>
+								</div>
+								<form class="consult-chat__form box-shadow" action="/">
+									<div class="consult-chat__info content-info">
+										<div class="consult-chat__info-pic">
+											<picture>
+												<source srcset="static/images/common/consultant.webp" type="image/webp" />
+												<source srcset="static/images/common/consultant.png" type="image/png" /><img
+													src="static/images/common/consultant.png" alt="consultant" />
+											</picture>
+										</div>
+										<div class="consult-chat__info-content">
+											<p class="consult-chat__info-text" data-da="consult-chat__info, last, 580">Получите
+												консультацию нашего юриста в течение <b>15 минут</b>.</p>
+											<p class="consult-chat__info-name"><strong>Алексей Романов</strong> юрист-консультант
+											</p>
+										</div>
+									</div><textarea class="textarea consult-chat__textarea"
+										placeholder="Задайте вопрос"></textarea><button
+										class="btn btn--bg-orange btn--size-small btn--border-radius consult-chat__btn"
+										type="submit">Отправить</button>
+									<div class="consult-chat__text">Гарантируем <a href="#">конфиденциальность</a> ваших
+										персональных данных!</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="performance">
+				<div class="container">
+					<div class="section-top performance__top">
+						<div class="section-top__content">
+							<h2 class="section-top__title title title--color-bg title--size-small">Выигранные дела</h2>
+						</div>
+						<div class="section-top__arrows performance__arrows"></div>
+					</div>
+					<div class="performance__slider">
+						<div class="performance__slide">
+							<div class="performance__box box-shadow">
+								<h3
+									class="title title--size-medium title--align-center title--weight-extrablod performance__title">
+									Управление транспортным стредством в состоянии опьянения</h3>
+								<ul>
+									<li><strong>Дата: &#32;</strong><span>18 июня 2018г.</span></li>
+									<li><strong>Место совершения: &#32;</strong><span>г. Москва</span></li>
+									<li><strong>Суд: &#32;</strong><span>Московский городской суд / заместитель председателя
+											Базькова Е. М.</span></li>
+									<li><strong>Результат: &#32;</strong><span>Дело выиграно. Защитник председателя Московского
+											городского суда Базькова Е. М. по жалобе защитника отменил постановление мирового судьи
+											и решение судьи Останкинского районного суда г. Москвы о лишении прав на 1.5 года и
+											штрафе 30 000 рублей и прекратил производство по делу в связи с недоказанностью
+											обстоятельств.</span></li>
+								</ul>
+								<div class="performance__images"><a class="performance__image" href="#"><img class="object-fit"
+											src="https://via.placeholder.com/200/" alt=""></a><a class="performance__image"
+										href="#"><img class="object-fit" src="https://via.placeholder.com/200/" alt=""></a><a
+										class="performance__image" href="#"><img class="object-fit"
+											src="https://via.placeholder.com/200/" alt=""></a><a class="performance__image"
+										href="#"><img class="object-fit" src="https://via.placeholder.com/200/" alt=""></a><a
+										class="performance__image" href="#"><img class="object-fit"
+											src="https://via.placeholder.com/200/" alt=""></a><a class="performance__image"
+										href="#"><img class="object-fit" src="https://via.placeholder.com/200/" alt=""></a><a
+										class="performance__image" href="#"><img class="object-fit"
+											src="https://via.placeholder.com/200/" alt=""></a></div>
+							</div>
+						</div>
+						<div class="performance__slide">
+							<div class="performance__box box-shadow">
+								<h3
+									class="title title--size-medium title--align-center title--weight-extrablod performance__title">
+									Управление транспортным стредством в состоянии опьянения</h3>
+								<ul>
+									<li><strong>Дата: &#32;</strong><span>18 июня 2018г.</span></li>
+									<li><strong>Место совершения: &#32;</strong><span>г. Москва</span></li>
+									<li><strong>Суд: &#32;</strong><span>Московский городской суд / заместитель председателя
+											Базькова Е. М.</span></li>
+									<li><strong>Результат: &#32;</strong><span>Дело выиграно. Защитник председателя Московского
+											городского суда Базькова Е. М. по жалобе защитника отменил постановление мирового судьи
+											и решение судьи Останкинского районного суда г. Москвы о лишении прав на 1.5 года и
+											штрафе 30 000 рублей и прекратил производство по делу в связи с недоказанностью
+											обстоятельств.</span></li>
+								</ul>
+								<div class="performance__images"><a class="performance__image" href="#"><img class="object-fit"
+											src="https://via.placeholder.com/200/" alt=""></a><a class="performance__image"
+										href="#"><img class="object-fit" src="https://via.placeholder.com/200/" alt=""></a><a
+										class="performance__image" href="#"><img class="object-fit"
+											src="https://via.placeholder.com/200/" alt=""></a><a class="performance__image"
+										href="#"><img class="object-fit" src="https://via.placeholder.com/200/" alt=""></a><a
+										class="performance__image" href="#"><img class="object-fit"
+											src="https://via.placeholder.com/200/" alt=""></a><a class="performance__image"
+										href="#"><img class="object-fit" src="https://via.placeholder.com/200/" alt=""></a><a
+										class="performance__image" href="#"><img class="object-fit"
+											src="https://via.placeholder.com/200/" alt=""></a><a class="performance__image"
+										href="#"><img class="object-fit" src="https://via.placeholder.com/200/" alt=""></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="formalized">
+				<div class="container">
+					<div class="section-top formalized__top">
+						<div class="section-top__content">
+							<h2 class="section-top__title title title--color-bg title--size-small">Оформляемые документы</h2>
+							<span class="section-top__text title title--size-tiny title--color-gray"> Задавайте свои вопросы
+								нашим юристам, чтобы получить помощь юриста</span>
+						</div>
+						<div class="section-top__arrows formalized__arrows"></div>
+					</div>
+					<form class="formalized__search" action="#"><input class="formalized__search-input" type="text"
+							placeholder="Поиск по документам..." required><button class="formalized__search-btn"
+							type="submit"><svg class="icon icon-search formalized__search-icon">
+								<use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+							</svg></button></form>
+					<div class="formalized__slider">
+						<div class="formalized__slide">
+							<div class="formalized__item">
+								<p class="formalized__text">Договор аренды транспортного средства с экипажем</p>
+								<div class="formalized__info"><strong
+										class="formalized__price title title--size-tiny title--color-green">1000 р</strong><strong
+										class="formalized__day title title--size-tiny title--color-green">3 дня</strong></div><a
+									class="btn btn--border-orange btn--border-radius btn--color-orange formalized__link"
+									href="#">Заказать</a>
+							</div>
+						</div>
+						<div class="formalized__slide">
+							<div class="formalized__item">
+								<p class="formalized__text">Договор купли продажи автомобиля, находящегося в залоге у банка</p>
+								<div class="formalized__info"><strong
+										class="formalized__price title title--size-tiny title--color-green">7000 р</strong><strong
+										class="formalized__day title title--size-tiny title--color-green">5 дней</strong></div><a
+									class="btn btn--border-orange btn--border-radius btn--color-orange formalized__link"
+									href="#">Заказать</a>
+							</div>
+						</div>
+						<div class="formalized__slide">
+							<div class="formalized__item">
+								<p class="formalized__text">Договор на оказание услуг по разработке финансово-экономической
+									модели</p>
+								<div class="formalized__info"><strong
+										class="formalized__price title title--size-tiny title--color-green">2000 р</strong><strong
+										class="formalized__day title title--size-tiny title--color-green">7 дней</strong></div><a
+									class="btn btn--border-orange btn--border-radius btn--color-orange formalized__link"
+									href="#">Заказать</a>
+							</div>
+						</div>
+						<div class="formalized__slide">
+							<div class="formalized__item">
+								<p class="formalized__text">Договор на оказание маркетинговых услуг</p>
+								<div class="formalized__info"><strong
+										class="formalized__price title title--size-tiny title--color-green">10 000
+										р</strong><strong class="formalized__day title title--size-tiny title--color-green">3
+										дня</strong></div><a
+									class="btn btn--border-orange btn--border-radius btn--color-orange formalized__link"
+									href="#">Заказать</a>
+							</div>
+						</div>
+						<div class="formalized__slide">
+							<div class="formalized__item">
+								<p class="formalized__text">Договор аренды транспортного средства с экипажем</p>
+								<div class="formalized__info"><strong
+										class="formalized__price title title--size-tiny title--color-green">1000 р</strong><strong
+										class="formalized__day title title--size-tiny title--color-green">3 дня</strong></div><a
+									class="btn btn--border-orange btn--border-radius btn--color-orange formalized__link"
+									href="#">Заказать</a>
+							</div>
+						</div>
+						<div class="formalized__slide">
+							<div class="formalized__item">
+								<p class="formalized__text">Договор аренды транспортного средства с экипажем</p>
+								<div class="formalized__info"><strong
+										class="formalized__price title title--size-tiny title--color-green">1000 р</strong><strong
+										class="formalized__day title title--size-tiny title--color-green">3 дня</strong></div><a
+									class="btn btn--border-orange btn--border-radius btn--color-orange formalized__link"
+									href="#">Заказать</a>
+							</div>
+						</div>
+						<div class="formalized__slide">
+							<div class="formalized__item">
+								<p class="formalized__text">Договор купли продажи автомобиля, находящегося в залоге у банка</p>
+								<div class="formalized__info"><strong
+										class="formalized__price title title--size-tiny title--color-green">7000 р</strong><strong
+										class="formalized__day title title--size-tiny title--color-green">5 дней</strong></div><a
+									class="btn btn--border-orange btn--border-radius btn--color-orange formalized__link"
+									href="#">Заказать</a>
+							</div>
+						</div>
+						<div class="formalized__slide">
+							<div class="formalized__item">
+								<p class="formalized__text">Договор на оказание услуг по разработке финансово-экономической
+									модели</p>
+								<div class="formalized__info"><strong
+										class="formalized__price title title--size-tiny title--color-green">2000 р</strong><strong
+										class="formalized__day title title--size-tiny title--color-green">7 дней</strong></div><a
+									class="btn btn--border-orange btn--border-radius btn--color-orange formalized__link"
+									href="#">Заказать</a>
+							</div>
+						</div>
+						<div class="formalized__slide">
+							<div class="formalized__item">
+								<p class="formalized__text">Договор на оказание маркетинговых услуг</p>
+								<div class="formalized__info"><strong
+										class="formalized__price title title--size-tiny title--color-green">10 000
+										р</strong><strong class="formalized__day title title--size-tiny title--color-green">3
+										дня</strong></div><a
+									class="btn btn--border-orange btn--border-radius btn--color-orange formalized__link"
+									href="#">Заказать</a>
+							</div>
+						</div>
+						<div class="formalized__slide">
+							<div class="formalized__item">
+								<p class="formalized__text">Договор аренды транспортного средства с экипажем</p>
+								<div class="formalized__info"><strong
+										class="formalized__price title title--size-tiny title--color-green">1000 р</strong><strong
+										class="formalized__day title title--size-tiny title--color-green">3 дня</strong></div><a
+									class="btn btn--border-orange btn--border-radius btn--color-orange formalized__link"
+									href="#">Заказать</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="news">
+				<div class="container">
+					<h2 class="title title--align-center title--size-small title--color-bg news__title">Публикации</h2>
+					<div class="news__row">
+						<div class="news__col">
+							<div class="news__col-thumbnail">
+								<picture>
+									<source srcset="static/images/content/news/news-1.webp" type="image/webp" />
+									<source srcset="static/images/content/news/news-1.jpg" type="image/jpg" /><img
+										class="object-fit" src="static/images/content/news/news-1.jpg" alt="news-1" />
+								</picture><time class="news__col-day day day--color-bg" datetime="2020-09-21">21.09.2020</time>
+							</div><a class="news__link" href="#"><span
+									class="news__link-text title title--color-green title--align-center">Написать жалобу в
+									Роспотребнадзор: образец 2020&nbsp;года</span></a>
+						</div>
+						<div class="news__col">
+							<div class="news__col-thumbnail">
+								<picture>
+									<source srcset="static/images/content/news/news-2.webp" type="image/webp" />
+									<source srcset="static/images/content/news/news-2.jpg" type="image/jpg" /><img
+										class="object-fit" src="static/images/content/news/news-2.jpg" alt="news-2" />
+								</picture><time class="news__col-day day day--color-bg" datetime="2020-09-21">21.09.2020</time>
+							</div><a class="news__link" href="#"><span
+									class="news__link-text title title--color-green title--align-center">Куда написать жалобу
+									на&nbsp;врача поликлиники</span></a>
+						</div>
+						<div class="news__col">
+							<div class="news__col-thumbnail">
+								<picture>
+									<source srcset="static/images/content/news/news-3.webp" type="image/webp" />
+									<source srcset="static/images/content/news/news-3.jpg" type="image/jpg" /><img
+										class="object-fit" src="static/images/content/news/news-3.jpg" alt="news-3" />
+								</picture><time class="news__col-day day day--color-bg" datetime="2020-09-21">21.09.2020</time>
+							</div><a class="news__link" href="#"><span
+									class="news__link-text title title--color-green title--align-center">Как делится имущество,
+									нажитое в&nbsp;гражданском браке в&nbsp;2020 году?</span></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="question" data-decor="ПРАВИО">
+				<div class="container">
+					<div class="question__inner"><img class="question__image"
+							src="static/images/content/question/question-image.svg" alt="">
+						<form class="question__form" action="#">
+							<h2 class="title title--color-white question__title">Задайте вопрос прямо сейчас</h2>
+							<div class="question__form-box"><svg class="icon icon-question-decor question__form-icon">
+									<use xlink:href="static/images/sprite/symbol/sprite.svg#question-decor"></use>
+								</svg><textarea class="textarea question__textarea" placeholder="Введите ваш вопрос здесь..."
+									required></textarea></div>
+							<div class="question__form-bottom"><button
+									class="btn btn--bg-white btn--color-green question__btn btn--border-radius btn--size-small"
+									type="submit">Задать вопрос</button>
+								<div class="question__phone" data-da="question__form, 1, 772"><span
+										class="question__phone-text">Бесплатная горячая линия</span><a
+										class="question__phone-link title title--color-white title--size-tiny"
+										href="tel:+74954077755">+7 (495) 40-777-55</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="articles">
+				<div class="container">
+					<div class="section-top articles__top">
+						<div class="section-top__content">
+							<h2 class="section-top__title title title--color-bg title--size-small">Статьи</h2>
+						</div><a
+							class="btn btn--size-tiny btn--border-green btn--border-radius btn--color-green articles__btn"
+							href="#" data-da="articles, last, 580">Добавить статью</a>
+					</div>
+					<div class="articles__items">
+						<article class="article">
+							<div class="article__preview">
+								<picture>
+									<source srcset="static/images/content/articles/article-image-1.webp" type="image/webp" />
+									<source srcset="static/images/content/articles/article-image-1.jpg" type="image/jpg" /><img
+										class="object-fit" src="static/images/content/articles/article-image-1.jpg"
+										alt="article-image-1" />
+								</picture>
+								<!-- time тег для сео можно прочитать о теге здесь https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time--><time
+									class="article__day" datetime="2021-01-28">28.01</time>
+							</div><a class="article__content" href="#">
+								<h3 class="title">Тексты типовых уставов</h3>
+								<p>Варианты Типовых уставов сконструированы по "классическому" образцу уставов...</p>
+							</a>
+						</article>
+						<article class="article">
+							<div class="article__preview">
+								<picture>
+									<source srcset="static/images/content/articles/article-image-2.webp" type="image/webp" />
+									<source srcset="static/images/content/articles/article-image-2.jpg" type="image/jpg" /><img
+										class="object-fit" src="static/images/content/articles/article-image-2.jpg"
+										alt="article-image-2" />
+								</picture>
+								<!-- time тег для сео можно прочитать о теге здесь https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time--><time
+									class="article__day" datetime="2021-01-28">28.01</time>
+							</div><a class="article__content" href="#">
+								<h3 class="title">Тексты типовых уставов</h3>
+								<p>Варианты Типовых уставов сконструированы по "классическому" образцу уставов...</p>
+							</a>
+						</article>
+						<article class="article">
+							<div class="article__preview">
+								<picture>
+									<source srcset="static/images/content/articles/article-image-3.webp" type="image/webp" />
+									<source srcset="static/images/content/articles/article-image-3.jpg" type="image/jpg" /><img
+										class="object-fit" src="static/images/content/articles/article-image-3.jpg"
+										alt="article-image-3" />
+								</picture>
+								<!-- time тег для сео можно прочитать о теге здесь https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time--><time
+									class="article__day" datetime="2021-01-28">28.01</time>
+							</div><a class="article__content" href="#">
+								<h3 class="title">Тексты типовых уставов</h3>
+								<p>Варианты Типовых уставов сконструированы по "классическому" образцу уставов...</p>
+							</a>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="answer" data-bg="static/images/content/answers/answer-bg.jpg"
+				data-bg-webp="static/images/content/answers/answer-bg.webp">
+				<div class="container">
+					<div class="section-top answer__top">
+						<div class="section-top__content">
+							<h2 class="section-top__title title title--color-bg title--size-small">Видео</h2>
+						</div><a class="btn btn--size-tiny btn--border-green btn--color-green btn--border-radius answer__btn"
+							href="#" data-da="answer, last, 580">Добавить видео</a>
+					</div>
+					<div class="answer__items">
+						<div class="answer-video">
+							<div class="answer-video__image">
+								<picture>
+									<source srcset="static/images/content/answers/answer-image-1.webp" type="image/webp" />
+									<source srcset="static/images/content/answers/answer-image-1.jpb" type="image/jpb" /><img
+										class="object-fit" src="static/images/content/answers/answer-image-1.jpb"
+										alt="answer-image-1" />
+								</picture><a class="answer-video__player" href="#"><svg
+										class="icon icon-play answer-video__icon">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#play"></use>
+									</svg></a>
+							</div>
+							<div class="answer-video__content">
+								<h3 class="answer-video__title">Что делать, если экспертиза не смогла ответить на вопрос?</h3>
+							</div>
+						</div>
+						<div class="answer-video">
+							<div class="answer-video__image">
+								<picture>
+									<source srcset="static/images/content/answers/answer-image-2.webp" type="image/webp" />
+									<source srcset="static/images/content/answers/answer-image-2.jpb" type="image/jpb" /><img
+										class="object-fit" src="static/images/content/answers/answer-image-2.jpb"
+										alt="answer-image-2" />
+								</picture><a class="answer-video__player" href="#"><svg
+										class="icon icon-play answer-video__icon">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#play"></use>
+									</svg></a>
+							</div>
+							<div class="answer-video__content">
+								<h3 class="answer-video__title">Что делать, если экспертиза не смогла ответить на вопрос?</h3>
+							</div>
+						</div>
+						<div class="answer-video">
+							<div class="answer-video__image">
+								<picture>
+									<source srcset="static/images/content/answers/answer-image-3.webp" type="image/webp" />
+									<source srcset="static/images/content/answers/answer-image-3.jpb" type="image/jpb" /><img
+										class="object-fit" src="static/images/content/answers/answer-image-3.jpb"
+										alt="answer-image-3" />
+								</picture><a class="answer-video__player" href="#"><svg
+										class="icon icon-play answer-video__icon">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#play"></use>
+									</svg></a>
+							</div>
+							<div class="answer-video__content">
+								<h3 class="answer-video__title">Что делать, если экспертиза не смогла ответить на вопрос?</h3>
+							</div>
+						</div>
+						<div class="answer-video">
+							<div class="answer-video__image">
+								<picture>
+									<source srcset="static/images/content/answers/answer-image-1.webp" type="image/webp" />
+									<source srcset="static/images/content/answers/answer-image-1.jpb" type="image/jpb" /><img
+										class="object-fit" src="static/images/content/answers/answer-image-1.jpb"
+										alt="answer-image-1" />
+								</picture><a class="answer-video__player" href="#"><svg
+										class="icon icon-play answer-video__icon">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#play"></use>
+									</svg></a>
+							</div>
+							<div class="answer-video__content">
+								<h3 class="answer-video__title">Что делать, если экспертиза не смогла ответить на вопрос?</h3>
+							</div>
+						</div>
+						<div class="answer-video">
+							<div class="answer-video__image">
+								<picture>
+									<source srcset="static/images/content/answers/answer-image-2.webp" type="image/webp" />
+									<source srcset="static/images/content/answers/answer-image-2.jpb" type="image/jpb" /><img
+										class="object-fit" src="static/images/content/answers/answer-image-2.jpb"
+										alt="answer-image-2" />
+								</picture><a class="answer-video__player" href="#"><svg
+										class="icon icon-play answer-video__icon">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#play"></use>
+									</svg></a>
+							</div>
+							<div class="answer-video__content">
+								<h3 class="answer-video__title">Что делать, если экспертиза не смогла ответить на вопрос?</h3>
+							</div>
+						</div>
+						<div class="answer-video">
+							<div class="answer-video__image">
+								<picture>
+									<source srcset="static/images/content/answers/answer-image-3.webp" type="image/webp" />
+									<source srcset="static/images/content/answers/answer-image-3.jpb" type="image/jpb" /><img
+										class="object-fit" src="static/images/content/answers/answer-image-3.jpb"
+										alt="answer-image-3" />
+								</picture><a class="answer-video__player" href="#"><svg
+										class="icon icon-play answer-video__icon">
+										<use xlink:href="static/images/sprite/symbol/sprite.svg#play"></use>
+									</svg></a>
+							</div>
+							<div class="answer-video__content">
+								<h3 class="answer-video__title">Что делать, если экспертиза не смогла ответить на вопрос?</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="banner">
+				<div class="banner__bg" style="background-image: url(static/images/content/difference/difference-bg.jpg)">
+					<div class="container">
+						<div class="main-info banner__info">
+							<div class="main-info__inner">
+								<div class="main-info__col">
+									<div class="main-info__logo">
+										<picture>
+											<source srcset="static/images/content/slider/slider-icon.webp" type="image/webp" />
+											<source srcset="static/images/content/slider/slider-icon.png" type="image/png" /><img
+												class="main-info__image" src="static/images/content/slider/slider-icon.png"
+												alt="slider-icon" />
+										</picture>
+									</div>
+									<h3 class="title title--color-white title--size-tiny main-info__title">Бесплатная горячая
+										линия 24/7</h3>
+								</div>
+								<div class="main-info__phone"><span class="main-info__text">Бесплатная горячая линия</span><a
+										class="main-info__link title title--color-white title--size-tiny"
+										href="tel:+74954077755">+7 (495) 40-777-55</a></div><a
+									class="main-info__btn btn btn--bg-white btn--color-green btn--border-radius" href="#">Задать
+									вопрос</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__row">
+					<div class="footer__col">
+						<div class="logo footer__logo"><a class="logo__link" href="#"><img class="logo__image"
+									src="static/images/common/logo.svg" alt=""></a></div>
+						<div class="footer__icons"><a class="footer__icons-link" href="#"><svg
+									class="icon icon-facebook footer__icon">
+									<use xlink:href="static/images/sprite/symbol/sprite.svg#facebook"></use>
+								</svg></a><a class="footer__icons-link" href="#"><svg class="icon icon-vk footer__icon">
+									<use xlink:href="static/images/sprite/symbol/sprite.svg#vk"></use>
+								</svg></a><a class="footer__icons-link" href="#"><svg class="icon icon-telegram footer__icon">
+									<use xlink:href="static/images/sprite/symbol/sprite.svg#telegram"></use>
+								</svg></a><a class="footer__icons-link" href="#"><svg class="icon icon-whatsapp footer__icon">
+									<use xlink:href="static/images/sprite/symbol/sprite.svg#whatsapp"></use>
+								</svg></a></div>
+					</div>
+					<div class="footer__col">
+						<h3 class="footer__col-title">Клиентам</h3>
+						<ul class="footer__col-list">
+							<li class="footer__col-item"><a class="footer__col-link" href="#">Задать вопрос</a></li>
+							<li class="footer__col-item"><a class="footer__col-link" href="#">Войти</a></li>
+							<li class="footer__col-item"><a class="footer__col-link" href="#">Регистрация</a></li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<h3 class="footer__col-title">О компании</h3>
+						<ul class="footer__col-list">
+							<li class="footer__col-item"><a class="footer__col-link" href="#">О нас</a></li>
+							<li class="footer__col-item"><a class="footer__col-link" href="#">Юристы</a></li>
+							<li class="footer__col-item"><a class="footer__col-link" href="#">Вопросы</a></li>
+							<li class="footer__col-item"><a class="footer__col-link" href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<h3 class="footer__col-title">Для юристов</h3>
+						<ul class="footer__col-list">
+							<li class="footer__col-item"><a class="footer__col-link" href="#">Вход</a></li>
+							<li class="footer__col-item"><a class="footer__col-link" href="#">Юристам и адвокатам</a></li>
+							<li class="footer__col-item"><a class="footer__col-link" href="#">Стать юристом проекта</a></li>
+						</ul>
+					</div>
+					<div class="footer__col footer__col--w-big">
+						<div class="footer__col-phone"><span class="footer__col-text">Бесплатная горячая линия</span><a
+								class="footer__link" href="tel:+74954077755"><svg class="icon icon-phone footer__col-icon">
+									<use xlink:href="static/images/sprite/symbol/sprite.svg#phone"></use>
+								</svg>+7 (495) 40-777-55</a></div>
+						<div class="footer__col-map"><span class="footer__col-text">Бесплатная горячая линия</span><a
+								class="footer__link" href="#"><svg class="icon icon-pin footer__col-icon">
+									<use xlink:href="static/images/sprite/symbol/sprite.svg#pin"></use>
+								</svg>г. Москва,, Каширский пр-д., д. 21, ком. 2, пом. 1</a></div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="static/js/libs.js"></script>
+	<script src="static/js/main.js"></script>
+</body>
+
+</html>

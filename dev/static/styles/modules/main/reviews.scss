@@ -1,0 +1,135 @@
+.reviews {
+  padding-bottom: 100px;
+  padding-top: 100px;
+  .slick-slide {
+    margin-left: 30px;
+  }
+  .slick-list {
+    margin-left: -30px;
+  }
+  &__col {
+    width: 100%;
+    background: #E3FBEF;
+    border-radius: 0 50px 50px 50px;
+    padding: 25px 30px;
+    &-header {
+      justify-content: space-between;
+      display: flex;
+      align-items: flex-start;
+    }
+    &-user {
+      max-width: 114px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    &-info {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &-day {
+      margin-bottom: 10px;
+    }
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-text {
+      color: var(--color-subtext);
+      margin-right: 10px;
+      &--wight {
+        &-bold {
+          font-weight: 700;
+        }
+      }
+      &--color {
+        &-green {
+          color: var(--color-green);
+        }
+      }
+    }
+    &-footer {
+      margin-top: -20px;
+    }
+    &-name {
+      display: block;
+    }
+    &-desc {
+      margin-top: 15px;
+      color: var(--color-text);
+    }
+  }
+}
+@media (max-width: 972px) {
+  .reviews .slick-slide {
+    margin-left: 15px;
+  }
+  .reviews .slick-list {
+    margin-left: -15px;
+  }
+  .reviews__col {
+    padding: 20px;
+    &-text {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &-desc {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &-info {
+      margin-bottom: 45px;
+    }
+  }
+}
+@media (max-width: 792px) {
+  .reviews__col {
+    margin-bottom: 20px;
+    &-name {
+      max-width: calc(100% - 130px);
+    }
+  }
+  .reviews {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 500px) {
+  .reviews {
+    padding-bottom: 20px;
+    padding-top: 50px;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 72.97px;
+      height: 72.97px;
+      background-image: url(../images/content/reviews/reviews-decor.svg);
+      z-index: -1;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position:  center;
+      bottom: 150px;
+      transform: rotate(135deg);
+      left: -25px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .reviews__col-user {
+    max-width: 80px;
+  }
+  .reviews__col-info {
+    margin-bottom: 0;
+  }
+  .reviews__col-footer {
+    margin-top: 15px;
+  }
+  .reviews__col {
+    padding: 15px;
+  }
+}

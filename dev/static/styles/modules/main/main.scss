@@ -1,0 +1,126 @@
+.main-info {
+  color: var(--color-white);
+  &__logo {
+    width: 55px;
+    height: 55px;
+    padding: 10px;
+    background-color: var(--color-white);
+    border-radius: 0 10px 10px 10px;
+    margin-right: 25px;
+    flex-shrink: 0;
+  }
+  &__inner {
+    padding: 15px 30px;
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__image {
+    object-fit: cover;
+
+  }
+  &__btn {
+    padding: 10px 40px;
+  }
+  &__title {
+    margin-right: 40px;
+  }
+  &__text {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__phone {
+    margin-right: 30px;
+  }
+  &__link {
+    font-size: 20px;
+    line-height: 26px;
+    display: block;
+  }
+  &__col {
+    display: flex;
+    align-items: center;
+  }
+}
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  &__text {
+    margin-top: 5px;
+    display: block;
+  }
+}
+.section-top__arrows {
+  display: flex;
+}
+.section-top__content {
+  margin-right: 10px;
+}
+.section-arrow {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all linear .2s;
+  &--next {
+    transform: rotate(180deg);
+  }
+  &--bg {
+    &-green {
+      background-color: var(--color-green);
+      &:hover {
+        background-color: var(--color-green-hover);
+      }
+    }
+    &-blue {
+      background-color: var(--color-blue);
+      &:hover {
+        background-color: var(--color-blue-hover);
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .icon-arrow {
+    width: 20px;
+    height: 20px;
+  }
+  .section-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .section-top {
+    margin-bottom: 20px;
+    overflow: hidden;
+    &__title {
+      margin-right: -100px;
+    }
+  }
+  .section-top__title--margin {
+    margin-right: 0;
+  }
+  .section-top__arrows {
+    margin-top: auto;
+  }
+}
+@import "slider";
+@import "partners";
+@import "certificates";
+@import "team";
+@import "reviews";
+@import "difference";
+@import "news";
+@import "question";
+@import "answers";
+@import "category";
+@import "information";
+@import "banner";

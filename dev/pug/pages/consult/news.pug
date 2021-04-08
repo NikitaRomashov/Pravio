@@ -1,0 +1,22 @@
+section.news
+	.container
+		h2.title.title--align-center.title--size-small.title--color-bg.news__title Публикации
+		.news__row
+			.news__col
+				.news__col-thumbnail
+					+picture('static/images/content/news', 'news-1', ['webp', 'jpg'], 'object-fit')
+					time(datetime="2020-09-21").news__col-day.day.day--color-bg 21.09.2020
+				a(href="#").news__link
+					span.news__link-text.title.title--color-green.title--align-center Написать жалобу в Роспотребнадзор: образец 2020&nbsp;года
+			.news__col
+				.news__col-thumbnail
+					+picture('static/images/content/news', 'news-2', ['webp', 'jpg'], 'object-fit')
+					time(datetime="2020-09-21").news__col-day.day.day--color-bg 21.09.2020
+				a(href="#").news__link
+					span.news__link-text.title.title--color-green.title--align-center Куда написать жалобу на&nbsp;врача поликлиники
+			.news__col
+				.news__col-thumbnail
+					+picture('static/images/content/news', 'news-3', ['webp', 'jpg'], 'object-fit')
+					time(datetime="2020-09-21").news__col-day.day.day--color-bg 21.09.2020
+				a(href="#").news__link
+					span.news__link-text.title.title--color-green.title--align-center Как делится имущество, нажитое в&nbsp;гражданском браке в&nbsp;2020 году?

@@ -1,0 +1,99 @@
+section.main-banner
+  .main-banner__bg(style="background-image: url(static/images/common/main-bg.jpg)")
+    .container
+      .main-banner__content
+        +picture('static/images/content/slider', 'slider-icon', ['webp', 'png'], 'main-banner__icon')
+        h2.title.title--color-white.title--size-big.title--align-center.main-banner__title КОНСУЛЬТАЦИЯ ЮРИСТА ПО ТЕЛЕФОНУ В МОСКВЕ
+        span.main-banner__desc На Правио можно получить помощь юриста по телефону из любого региона России. Для этого оставьте заявку или позвоните на единую горячую линию
+section.faq.faq--consultation
+  .container
+    .faq__content
+      .faq__top
+        h2.title.title--size-small.title--align-center.faq__title Задать вопрос
+        span.title.title--size-tiny.title--color-gray.faq__subtitle Чтобы задать вопрос юристу онлайн, Вам потребуется всего лишь несколько минут и заполнить пару шагов
+      form(action="#").faq__form
+        h3.title.title--align-center.title--size-medium.title--color-green.faq__form-title Ваш вопрос юристам
+        .faq__form-row
+          label.faq__control.faq__control--width.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            input(type="text" placeholder="Кратко поясните суть проблемы").input.faq__control-input
+            span.label__text.faq__control-text Пример: «Как вернуть некачественный товар в интернет-магазин?»
+          label.faq__control.faq__control--width.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            textarea(placeholder="Расскажите нам о вашей проблеме").textarea.faq__control-textarea
+        div.dropzone.file-upload
+          input(type="file" name="file" multiple)
+          .dz-message
+            span.dz-message__file
+              +icon('paper-clip', 'dz-message__icon')
+              | Прикрепить файл
+            span.dz-message__text Допустимый размер файла до 10Мб. Доступные расширения: jpg,jpeg,png,pdf,doc,docx,odt
+          .js-browse.dz-upload
+            +icon('upload', 'dz-upload__icon')
+            span.file-upload__text Загрузить файл
+        h3.title.title--align-center.title--size-medium.title--color-green.faq__form-title Ваши контакты
+        .faq__form-row
+          label.faq__control.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            input(type="text" placeholder="Имя *").input.faq__control-input
+            span.label__text.faq__control-text Пример: «Как вернуть некачественный товар в интернет-магазин?»
+          label.faq__control.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            input(type="text" placeholder="Email *").input.faq__control-input
+            span.label__text.faq__control-text Для уведомлений об ответах юриста
+          label.faq__control.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            input(type="text" placeholder="Телефон *").input.faq__control-input
+            span.label__text.faq__control-text Пример: «Как вернуть некачественный товар в интернет-магазин?»
+          .faq__control.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            select.select.faq__control-select(data-placeholder="Город *")
+              option.select__option
+              option(value="1").select__option Котегори 1
+              option(value="2").select__option Котегори 2
+              option(value="3").select__option Котегори 3
+              option(value="4").select__option Котегори 4
+              option(value="5").select__option Котегори 5
+            span.label__text.faq__control-text Для уведомлений об ответах юриста
+        h3.title.title--align-center.title--size-medium.title--color-green.faq__form-title Выберите Ваш тарифный план
+        .faq__form-slider
+          .faq__form-slide
+            .faq__item.faq__item--block
+              .faq__item-head.faq__item-head--bg-orange
+                h3.title.title--align-center.title--size-tiny.title--color-white VIP
+              p.faq__item-desc Сложная ситуация, допускающая противоречивость и требующая изучения дополнительных документов и практик.
+              .faq__item-body
+                ul.faq__item-list
+                  li.faq__item-schedule
+                    +icon('clock', 'faq__item-icon')
+                    span.faq__item-text Время разговора <strong>— до 1 часа</strong>
+                strong.faq__item-price(data-value="/ руб") 1200
+              .faq__item-footer
+                button(type="submit").faq__item-btn.btn.btn--size-tiny.btn--color-orange.btn--border-orange Выбрать
+          .faq__form-slide
+            .faq__item.faq__item--block
+              .faq__item-head.faq__item-head--bg-green
+                h3.title.title--align-center.title--size-tiny.title--color-white ОБЫЧНЫЙ
+              p.faq__item-desc Ситуация, предполагающая уточнения и более детальное погружение в проблему.
+              .faq__item-body
+                ul.faq__item-list
+                  li.faq__item-schedule
+                    +icon('clock', 'faq__item-icon')
+                    span.faq__item-text Время разговора <strong>— до 30 минут</strong>
+                strong.faq__item-price(data-value="/ руб") 700
+              .faq__item-footer
+                button(type="submit").faq__item-btn.btn.btn--size-tiny.btn--color-orange.btn--border-orange Выбрать
+          .faq__form-slide
+            .faq__item.faq__item--block
+              .faq__item-head.faq__item-head--bg-green
+                h3.title.title--align-center.title--size-tiny.title--color-white ЛЕГКИЙ
+              p.faq__item-desc Несложная ситуация, при которой юрист даст однозначно верный ответ за короткое время.
+              .faq__item-body
+                ul.faq__item-list
+                  li.faq__item-schedule
+                    +icon('clock', 'faq__item-icon')
+                    span.faq__item-text Время разговора <strong>— до 15 минут</strong>
+                strong.faq__item-price(data-value="/ руб") 400
+              .faq__item-footer
+                button(type="submit").faq__item-btn.btn.btn--size-tiny.btn--color-orange.btn--border-orange Выбрать
+    span.faq__desc Нажимая кнопку «Задать вопрос», я принимаю условия Пользовательского соглашения и условия Политики конфиденциальности и Политикой обработки персональных данных.

@@ -1,0 +1,47 @@
+section.slider
+  .slider__bg(style="background-image: url(static/images/common/main-bg.jpg)")
+    .slider__wrapper
+      .container
+        .slider__inner
+          .slider__content
+            .slider__content-top
+              span.slider__desc.slider__desc--small Ответим на все ваши вопросы в любой сфере права
+              h1.title.title--size-big.title--color-white.slider__title ЮРИДИЧЕСКАЯ КОНСУЛЬТАЦИЯ ОНЛАЙН В МОСКВЕ
+            .slider__content-bottom(data-da="slider__inner, last, 870")
+              ul.slider__list
+                li.slider__list-item
+                  +icon('lawyer', 'slider__list-icon')
+                  span.slider__list-text С нами сотрудничают сотни компетентных специалистов в различных областях права из всех регионов России
+                li.slider__list-item
+                  +icon('question-mark', 'slider__list-icon')
+                  span.slider__list-text Вопрос юристу или адвокату можно задать, как <strong>бесплатно</strong>, так и на <strong>платной основе</strong>.
+                li.slider__list-item
+                  +icon('clock', 'slider__list-icon')
+                  span.slider__list-text Уже через 10-15 минут вы получите первый экспертный ответ.
+                li.slider__list-item
+                  +icon('star', 'slider__list-icon')
+                  span(data-desc="* По рейтингу Rambler TOP 100").slider__list-text Мы в ТОП 3 юридических сайтов*
+          .slider__image
+            +picture('static/images/content/slider', 'main-image', ['webp', 'svg'], 'slider__pic')
+            .slider__image-info
+              strong.slider__image-name Алексей Романов
+              span.slider__image-desc юрист-консультант с 27 летним стажем
+    .slider__bottom
+      .container
+        .slider__bottom-inner
+          .slider__bottom-content
+            h2.slider__subtitle.title.title--size-small.title--color-white Задайте вопрос юристам Правио
+            span.slider__desc Напишите свой вопрос и наш юрист ответит вам в течение 15-30 минут. Юридическая помощь предоставляется на бесплатной и платной основе
+          form(action="#").slider__form
+            img(src="static/images/common/decor1.svg" alt="").slider__form-decor.slider__form-decor--1
+            img(src="static/images/common/decor2.svg" alt="").slider__form-decor.slider__form-decor--2
+            img(src="static/images/common/decor3.svg" alt="").slider__form-decor.slider__form-decor--3
+            img(src="static/images/common/decor4.svg" alt="").slider__form-decor.slider__form-decor--4
+            img(src="static/images/common/decor5.svg" alt="").slider__form-decor.slider__form-decor--5
+            img(src="static/images/common/decor6.svg" alt="").slider__form-decor.slider__form-decor--6
+            .slider__form-box
+              +icon('question-decor', 'slider__form-icon')
+              textarea(placeholder="Введите ваш вопрос здесь..." required).textarea.slider__form-textarea
+            .slider__form-row
+              span.slider__form-text Гарантируем конфиденциальность ваших персональных данных!
+              button(type="submit").btn.btn--bg-orange.slider__form-btn Задать вопрос

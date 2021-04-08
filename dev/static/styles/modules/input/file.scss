@@ -1,0 +1,38 @@
+.file {
+  display: block;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  &__text {
+    color: rgba(63, 63, 63, 0.7);
+    font-size: 11px;
+    line-height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+  &__btn {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    input[type="file"] { display: none;  }
+    &_label {
+      display: block;
+      max-width: fit-content;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+    &_text {
+      display: block;
+      color: var(--color-btn);
+      margin-bottom: 7px;
+    }
+    &_icon {
+      width: 17px;
+      height: 17px;
+      margin-right: 10px;
+      fill: var(--color-btn);
+    }
+  }
+}

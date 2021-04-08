@@ -1,0 +1,120 @@
+.btn {
+  display: inline-block;
+  padding: 8px 25px;
+  border-radius: 10px 0px;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 700;
+  color: var(--color-white);
+  transition: all linear .2s;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid transparent;
+  &--width {
+    display: block;
+    width: 100%;
+  }
+  &--color {
+    &-green {
+      color: var(--color-green);
+      &:hover {
+        border: 2px solid var(--color-white);
+        color: var(--color-white);
+        background-color: transparent;
+      }
+    }
+    &-orange {
+      color: var(--color-btn);
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+    &-bg {
+      color: var(--color-bg);
+    }
+  }
+  &--border {
+    &-orange {
+      border-color: var(--color-btn);
+      &:hover {
+        background-color: var(--color-btn);
+      }
+    }
+    &-green {
+      border-color: var(--color-green);
+
+      &:hover {
+        background-color: var(--color-green);
+      }
+    }
+    &-radius {
+      border-radius: 20px;
+      padding: 13px 20px;
+    }
+  }
+  &--bg {
+    &-white {
+      background-color: var(--color-white);
+    }
+    &-orange {
+      background-color: var(--color-btn);
+      &:hover {
+        color: var(--color-btn);
+        background-color: var(--color-white);
+        border: 2px solid var(--color-btn);
+      }
+    }
+    &-green {
+      background-color: var(--color-green);
+      &:hover {
+        border: 2px solid var(--color-green);
+        color: var(--color-green);
+        background-color: transparent;
+      }
+    }
+    &-blue {
+      background-color: var(--color-blue);
+    }
+  }
+  &--is-hover {
+    pointer-events: none;
+  }
+  &--size {
+    &-small {
+      font-size: 20px;
+      line-height: 26px;
+      padding: 10px 40px;
+    }
+    &-tiny {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+  &-icon {
+    vertical-align: middle;
+    margin-right: 7px;
+    &--color {
+      &-green {
+        fill: var(--color-green);
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .btn {
+    font-size: 12px;
+    line-height: 16px;
+    &--size {
+      &-small {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+@media (max-width: 340px) {
+  .btn {
+    padding: 10px 8px;
+  }
+}
+@import "hamburger";

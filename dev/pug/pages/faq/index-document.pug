@@ -1,0 +1,107 @@
+section.main-banner
+  .main-banner__bg(style="background-image: url(static/images/common/main-bg.jpg)")
+    .container
+      .main-banner__content
+        +picture('static/images/content/slider', 'slider-icon', ['webp', 'png'], 'main-banner__icon')
+        h2.title.title--color-white.title--size-big.title--align-center.main-banner__title ЗАКАЗАТЬ ДОКУМЕНТ ЮРИСТУ В МОСКВЕ
+        span.main-banner__desc Оставьте заявку на сайте и получите предложения от юристов со всей россии
+section.faq.faq--document
+  .container
+    .faq__content
+      .faq__top
+        h2.title.title--size-small.title--align-center.faq__title Заказать документ
+        span.title.title--size-tiny.title--color-gray.faq__subtitle Чтобы задать вопрос юристу онлайн, Вам потребуется всего лишь несколько минут и заполнить пару шагов
+      form(action="#").faq__form
+        h3.title.title--align-center.title--size-medium.title--color-green.faq__form-title Выберите документ
+        .documents
+          .documents__item
+            +icon('briefcase', 'documents__item-icon')
+            strong.documents__item-title Регистрация бизнеса
+            span.documents__item-text Комплекты документов для регистрации ООО, ИП, ТСЖ и др.
+          .documents__item
+            +icon('auction', 'documents__item-icon')
+            strong.documents__item-title Документы в суд
+            span.documents__item-text Исковое заявление, отзыв на исковое заявление, ходатайство, жалоба на решение суда и др.
+          .documents__item
+            +icon('lawyer-user', 'documents__item-icon')
+            strong.documents__item-title Жалоба на чиновника
+            span.documents__item-text Жалоба на действия должностного лица, судебного пристава, сотрудника ГИБДД и др.
+          .documents__item
+            +icon('paper', 'documents__item-icon')
+            strong.documents__item-title Договоры и соглашения
+            span.documents__item-text Договоры аренды, подряда, купли-продажи, займа, комиссии и др.
+          .documents__item
+            +icon('sad', 'documents__item-icon')
+            strong.documents__item-title Претензии потребителей
+            span.documents__item-text Претензии на возврат денег за товар. Претензии в страховую, в банк, к ЖКХ и др.
+          .documents__item
+            +icon('document-handle', 'documents__item-icon')
+            strong.documents__item-title Другое
+            span.documents__item-text Любой другой документ. Вы можете описать его самостоятельно.
+        .faq__form-row
+          .faq__control.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            select.select.faq__control-select(data-placeholder="Тип документа *")
+              option(value="").select__option &nbsp;
+              option(value="1").select__option Документ 1
+              option(value="2").select__option Документ 2
+              option(value="3").select__option Документ 3
+              option(value="4").select__option Документ 4
+              option(value="5").select__option Документ 5
+            span.label__text.faq__control-text Выберите тип документа
+          label.faq__control.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            input(type="text" placeholder="Суть *").input.faq__control-input
+            span.label__text.faq__control-text Опишите суть
+          label.faq__control.faq__control--width.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            textarea(placeholder="Описание *").textarea.faq__control-textarea
+        div.dropzone.file-upload
+          input(type="file" name="file" multiple)
+          .dz-message
+            span.dz-message__file
+              +icon('paper-clip', 'dz-message__icon')
+              | Прикрепить файл
+            span.dz-message__text Допустимый размер файла до 10Мб. Доступные расширения: jpg,jpeg,png,pdf,doc,docx,odt
+          .js-browse.dz-upload
+            +icon('upload', 'dz-upload__icon')
+            span.file-upload__text Загрузить файл
+        h3.title.title--align-center.title--size-medium.title--color-green.faq__form-title Ваши контакты
+        .faq__form-row
+          label.faq__control.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            input(type="text" placeholder="Имя *").input.faq__control-input
+            span.label__text.faq__control-text Пример: «Как вернуть некачественный товар в интернет-магазин?»
+          label.faq__control.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            input(type="text" placeholder="Email *").input.faq__control-input
+            span.label__text.faq__control-text Для уведомлений об ответах юриста
+          label.faq__control.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            input(type="text" placeholder="Телефон *").input.faq__control-input
+            span.label__text.faq__control-text Пример: «Как вернуть некачественный товар в интернет-магазин?»
+          .faq__control.label
+            +icon('arrow-down', 'label__icon label__icon--fill-orange')
+            select.select.faq__control-select(data-placeholder="Город *")
+              option.select__option
+              option(value="1").select__option Котегори 1
+              option(value="2").select__option Котегори 2
+              option(value="3").select__option Котегори 3
+              option(value="4").select__option Котегори 4
+              option(value="5").select__option Котегори 5
+            span.label__text.faq__control-text Для уведомлений об ответах юриста
+        h3.title.title--align-center.title--size-medium.title--color-green.faq__form-title Стоимость документа
+        .documents-info
+          +icon('arrow-down', 'documents-info__icon label__icon--fill-orange')
+          span.documents-info__text Стоимость документа:
+          .documents-info__radios
+            input(type="radio" id="lawyer" name="price" checked)
+            label(for="lawyer").documents-info__radio.radio
+              span.radio-text.documents-info__text  По договоренности с юристом
+            input(type="radio" id="pay" name="price")
+            label(for="pay").documents-info__radio.radio
+              span.radio-text.documents-info__text  Я планирую заплатить
+          input(type="text" disabled).input.documents-info__input
+          span.documents-info__text руб.
+        button(type="submit").btn.btn--bg-orange.faq__btn.btn--width Создать заявку
+    span.faq__desc Нажимая кнопку «Задать вопрос», я принимаю условия Пользовательского соглашения и условия Политики конфиденциальности и Политикой обработки персональных данных.

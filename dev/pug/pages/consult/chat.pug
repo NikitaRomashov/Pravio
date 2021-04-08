@@ -1,0 +1,43 @@
+section.consult-chat
+	.consult-chat__bg(data-bg="static/images/content/consult/consult-bg.png" data-bg-webp="static/images/content/consult/consult-bg.webp")
+		+picture('static/images/content/consult', 'decor', ['webp', 'png'], 'consult-chat__decor')
+		.container
+			.consult-chat__container
+				.consult-chat__items
+					.consult-chat__item
+						strong.consult-chat__number(data-number="207") 0
+						span ответов
+					.consult-chat__item
+						strong.consult-chat__number(data-number="6") 0
+						span консультаций
+					.consult-chat__item
+						strong.consult-chat__number(data-number="0") 0
+						span документов
+				.consult-chat__content.content-info
+					h2 Консультируйтесь с юристом online
+					p Задайте вопрос прямо сейчас, и его увидят сотни профессионалов со всей России. Первый ответ вы получите уже через <b>15 минут</b>! <br>
+						| Юридическая помощь предоставляется на бесплатной и платной основе.
+				.consult-chat__box(data-da="consult-chat, last, 880")
+					.consult-chat__statistics
+						.consult-chat__statistic
+							+icon('clock')
+							strong(data-number="15" data-separator="минут") 0
+							span время ответа
+						.consult-chat__statistic
+							+icon('phone-border')
+							strong(data-number="89") 0
+							span консультаций сегодня
+						.consult-chat__statistic.consult-chat__statistic--small
+							+icon('clients')
+							strong(data-number="98" data-separator="%") 0
+							span довольных клиентов
+					form(action="/").consult-chat__form.box-shadow
+						.consult-chat__info.content-info
+							.consult-chat__info-pic
+								+picture('static/images/common', 'consultant', ['webp', 'png'])
+							div.consult-chat__info-content
+								p.consult-chat__info-text(data-da="consult-chat__info, last, 580") Получите консультацию нашего юриста в течение <b>15 минут</b>.
+								p.consult-chat__info-name <strong>Алексей Романов</strong> юрист-консультант
+						textarea(placeholder="Задайте вопрос").textarea.consult-chat__textarea
+						button(type="submit").btn.btn--bg-orange.btn--size-small.btn--border-radius.consult-chat__btn Отправить
+						.consult-chat__text Гарантируем <a href="#">конфиденциальность</a> ваших персональных данных!

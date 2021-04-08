@@ -1,0 +1,207 @@
+.input {
+  border: 1px solid var(--color-input-border);
+  height: 45px;
+  display: block;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 13px 28px;
+  width: 100%;
+  max-width: 390px;
+  box-shadow: 0px 4px 15px rgba(201, 201, 201, 0.1);
+  margin-bottom: 5px;
+  background-color: #FAFAFA;
+  &:disabled {
+    &::placeholder {
+      opacity: 0.2;
+      border-color: #ECECEC;
+      cursor: no-drop;
+    }
+  }
+  &::placeholder {
+    color: rgba(49, 49, 49, 0.7);
+    font-size: 14px;
+    line-height: 19px;
+  }
+  &:focus {
+    border-color: var(--color-green);
+  }
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  &-text {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--color-btn);
+      display: inline-block;
+      transition: all linear .2s;
+      transform: scale(0) translateX(-13px);
+      flex-shrink: 0;
+    }
+  }
+  &::before {
+    content: '';
+    min-width: 16px;
+    height: 16px;
+    border: 1px solid #DFDFDF;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+}
+input[type="radio"] {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transform: scale(0);
+  &:checked {
+    & + .radio {
+      .radio-text::before {
+        transform: scale(1) translateX(-13px);
+      }
+    }
+  }
+}
+.label {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+  .icon-arrow-down {
+    transform: rotate(-90deg);
+  }
+  &__icon {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    &--fill {
+      &-orange {
+        stroke: var(--color-btn)
+      }
+    }
+  }
+  &__text {
+    display: block;
+    font-size: 11px;
+    line-height: 15px;
+    color: rgba(49, 49, 49, 0.7);
+  }
+}
+.select2 {
+  max-width: 400px;
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  line-height: 19px;
+  box-shadow: 0px 4px 15px rgba(201, 201, 201, 0.1);
+  margin-bottom: 5px;
+}
+.select2-container--default .select2-selection--single {
+  border: 1px solid var(--color-input-border);
+  border-radius: 10px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  background: #FAFAFA;
+  &:focus {
+
+  }
+}
+.select2-container--default.select2-container--open {
+  .select2-selection--single {
+    border-color: var(--color-green);
+  }
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: var(--color-bg);
+  padding: 0;
+  display: block;
+}
+.select2-dropdown {
+  border-radius: 0 0 10px 10px;
+  background: #FAFAFA;
+  border: 1px solid var(--color-input-border);
+}
+.select2-results__options {
+  padding: 0 28px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.select2-results {
+  width: calc(100% + 2px);
+}
+.select2-results__option {
+  padding: 10px 0;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: transparent;
+  color: initial;
+  font-weight: 700;
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: transparent;
+  font-weight: 700;
+}
+.select2-selection__arrow {
+  background-image: url(../images/common/down-arrow.svg);
+  background-repeat: no-repeat;
+  background-position:  center;
+  margin-left: auto;
+}
+.select2-container--open {
+  .select2-selection__arrow {
+    transform: rotate(180deg);
+  }
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  position: static;
+}
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #313131;
+}
+.file-upload {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 20px 0;
+}
+@media (max-width: 650px) {
+  .input {
+    padding: 13px 20px;
+  }
+  .select2-container--default .select2-selection--single {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .input {
+    font-size: 12px;
+    line-height: 16px;
+    &::placeholder {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@import "range";
+@import "file";

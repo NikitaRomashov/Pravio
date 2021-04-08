@@ -1,0 +1,117 @@
+.regulations {
+  padding-bottom: 100px;
+  &__text {
+    margin-top: 25px;
+  }
+  &__content {
+    color: var(--color-bg);
+    font-size: 16px;
+    line-height: 22px;
+    h2:not(.regulations__title) {
+      font-size: 24px;
+      line-height: 33px;
+      display: flex;
+      align-items: center;
+      margin-top: 25px;
+      &::before {
+        content: '';
+        width: 18px;
+        height: 10px;
+        flex-shrink: 0;
+        transform: rotate(-90deg);
+        margin-right: 20px;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='transparent' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0.5L6 5.5L11 0.5' stroke='%23ff9900'/%3E%3C/svg%3E ");
+        background-repeat: no-repeat;
+        background-position:  center;
+        background-size: cover;
+      }
+    }
+    p {
+      margin-top: 25px;
+    }
+    ul, ol {
+      margin-top: 25px;
+      counter-reset: item;
+    }
+    li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        content: counter(item) ".";
+        counter-increment: item;
+        display: inline-block;
+        font-weight: 700;
+        margin-right: 10px;
+      }
+    }
+  }
+  &__list {
+    margin-top: 25px;
+    counter-reset: item;
+    &-item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        content: counter(item) ".";
+        counter-increment: item;
+        display: inline-block;
+        font-weight: 700;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    &-icon {
+      width: 18px;
+      height: 10px;
+      fill: transparent;
+      stroke: var(--color-btn);
+      flex-shrink: 0;
+      transform: rotate(-90deg);
+      margin-right: 20px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .regulations {
+    padding-bottom: 50px;
+    &__content {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__list {
+      margin-top: 15px;
+      &-item {
+        margin-bottom: 5px;
+        &::before {
+          margin-right: 5px;
+        }
+      }
+    }
+    &__text {
+      margin-top: 15px;
+    }
+    &__subtitle {
+      margin-top: 15px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    &__icon {
+      margin-right: 5px;
+    }
+  }
+}

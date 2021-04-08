@@ -1,0 +1,56 @@
+footer.footer
+  .container
+    .footer__row
+      .footer__col
+        .logo.footer__logo
+          a(href="#").logo__link
+            img(src="static/images/common/logo.svg" alt="").logo__image
+        .footer__icons
+          a(href="#").footer__icons-link
+            +icon('facebook', 'footer__icon')
+          a(href="#").footer__icons-link
+            +icon('vk', 'footer__icon')
+          a(href="#").footer__icons-link
+            +icon('telegram', 'footer__icon')
+          a(href="#").footer__icons-link
+            +icon('whatsapp', 'footer__icon')
+      .footer__col
+        h3.footer__col-title Клиентам
+        ul.footer__col-list
+          li.footer__col-item
+            a(href="#").footer__col-link Задать вопрос
+          li.footer__col-item
+            a(href="#").footer__col-link Войти
+          li.footer__col-item
+            a(href="#").footer__col-link Регистрация
+      .footer__col
+        h3.footer__col-title О компании
+        ul.footer__col-list
+          li.footer__col-item
+            a(href="#").footer__col-link О нас
+          li.footer__col-item
+            a(href="#").footer__col-link Юристы
+          li.footer__col-item
+            a(href="#").footer__col-link Вопросы
+          li.footer__col-item
+            a(href="#").footer__col-link Контакты
+      .footer__col
+        h3.footer__col-title Для юристов
+        ul.footer__col-list
+          li.footer__col-item
+            a(href="#").footer__col-link Вход
+          li.footer__col-item
+            a(href="#").footer__col-link Юристам и адвокатам
+          li.footer__col-item
+            a(href="#").footer__col-link Стать юристом проекта
+      .footer__col.footer__col--w-big
+        .footer__col-phone
+          span.footer__col-text Бесплатная горячая линия
+          a(href="tel:+74954077755").footer__link
+            +icon('phone', 'footer__col-icon')
+            | +7 (495) 40-777-55
+        .footer__col-map
+          span.footer__col-text Бесплатная горячая линия
+          a(href="#").footer__link
+            +icon('pin', 'footer__col-icon')
+            | г. Москва, Каширский пр-д., д. 21, ком. 2, пом. 1

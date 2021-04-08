@@ -1,0 +1,32 @@
+section.order
+	.order__bg(data-bg="static/images/content/order/decor.png" data-bg-webp="static/images/content/order/decor.webp")
+		+picture('static/images/content/consult', 'decor', ['webp', 'png'], 'order__decor')
+		.container
+			.order-form.box-shadow
+				.order-form__top
+					h2.order-form__title.title.title--size-medium.title--color-bg Опишите вашу проблему
+					h3.order-form__subtitle.title.title--color-gray Наши специалисты регулярно повышают квалификацию
+				.order-form__row
+					.order-form__faild
+						textarea.textarea-default.order-form__textarea(placeholder="Опишите задачу")
+				.file.order-form__file
+					.file__btn
+						label.file__btn_label
+							input(type="file")
+							span.file__btn_text
+								+icon('paper-clip', 'file__btn_icon')
+								| Прикрепить файл
+					span.file__text Допустимый размер файла до 10Мб. Доступные расширения: jpg,jpeg,png,pdf,doc,docx,odt
+				.order-form__row
+					.order-form__col
+						label.order-form__control
+							span Стоимость документа*:
+							input(type="text" required).input
+							| руб.
+						span.order-form__prompt * Цена не может быть ниже установленной юристом.
+					.order-form__col
+						label.order-form__control
+							span Сроки исполнения:
+							input(type="text" required).input
+							| дней.
+				button(type="submit").order-form__btn.btn.btn--bg-orange.btn--border-radius Заказать

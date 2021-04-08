@@ -1,0 +1,14 @@
+section.question(data-decor="ПРАВИО")
+  .container
+    .question__inner
+      img(src="static/images/content/question/question-image.svg" alt="").question__image
+      form(action="#").question__form
+        h2.title.title--color-white.question__title Задайте вопрос прямо сейчас
+        .question__form-box
+          +icon('question-decor', 'question__form-icon')
+          textarea(placeholder="Введите ваш вопрос здесь..." required).textarea.question__textarea
+        .question__form-bottom
+          button(type="submit").btn.btn--bg-white.btn--color-green.question__btn.btn--border-radius.btn--size-small Задать вопрос
+          .question__phone(data-da="question__form, 1, 772")
+            span.question__phone-text Бесплатная горячая линия
+            a(href="tel:+74954077755").question__phone-link.title.title--color-white.title--size-tiny +7 (495) 40-777-55

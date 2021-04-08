@@ -1,0 +1,122 @@
+.category {
+  padding-bottom: 100px;
+  padding-top: 100px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  &__inner {
+    margin-top: 30px;
+  }
+  &__title {
+    padding-bottom: 20px;
+  }
+  &__row {
+    display: flex;
+
+    margin-left: -10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  #business {
+    .category__link {
+      display: none;
+    }
+  }
+  #face {
+    .category__link {
+      display: none;
+    }
+  }
+  &__link {
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 10px 10px 10px;
+    width: calc(33.33333% - 10px);
+    align-items: center;
+    margin-left: 10px;
+    padding: 8px 13px;
+    transition: all linear .2s;
+    min-height: 53px;
+    display: flex;
+    &--padding {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    &:hover {
+      color: var(--color-white);
+      .category__icon {
+        background-color: var(--color-white) !important;
+        .icon {
+          fill: var(--color-green)
+        }
+      }
+
+      background-color: var(--color-green);
+    }
+  }
+  &__icon {
+    width: 37px;
+    height: 37px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: all linear .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      width: 22px;
+      height: 22px;
+      fill: transparent;
+    }
+  }
+  &__btn {
+    margin-top: 10px;
+    display: table;
+    margin-left: auto;
+  }
+}
+@media (max-width: 772px) {
+  .category__link {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 550px) {
+  .category__link {
+    width: 100%;
+    margin-left: 0;
+  }
+  .category__row {
+    margin-left: 0;
+  }
+}
+@media (max-width: 500px) {
+  .category__btn {
+    margin-right: auto;
+    padding: 16px 32px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .category__title {
+    padding-bottom: 0;
+  }
+  .category__inner {
+    margin-top: 15px;
+  }
+  .category {
+    padding-bottom: 50px;
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 50px;
+    &__link {
+      &--padding {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .category__link {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

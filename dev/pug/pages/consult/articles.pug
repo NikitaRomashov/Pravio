@@ -1,0 +1,31 @@
+section.articles
+	.container
+		.section-top.articles__top
+			.section-top__content
+				h2.section-top__title.title.title--color-bg.title--size-small Статьи
+			a(href="#" data-da="articles, last, 580").btn.btn--size-tiny.btn--border-green.btn--border-radius.btn--color-green.articles__btn Добавить статью
+		.articles__items
+			article.article
+				.article__preview
+					+picture('static/images/content/articles', 'article-image-1', ['webp', 'jpg'], 'object-fit')
+					// time тег для сео можно прочитать о теге здесь https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
+					time(datetime="2021-01-28").article__day 28.01
+				a(href="#").article__content
+					h3.title Тексты типовых уставов
+					p Варианты Типовых уставов сконструированы по "классическому" образцу уставов...
+			article.article
+				.article__preview
+					+picture('static/images/content/articles', 'article-image-2', ['webp', 'jpg'], 'object-fit')
+					// time тег для сео можно прочитать о теге здесь https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
+					time(datetime="2021-01-28").article__day 28.01
+				a(href="#").article__content
+					h3.title Тексты типовых уставов
+					p Варианты Типовых уставов сконструированы по "классическому" образцу уставов...
+			article.article
+				.article__preview
+					+picture('static/images/content/articles', 'article-image-3', ['webp', 'jpg'], 'object-fit')
+					// time тег для сео можно прочитать о теге здесь https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
+					time(datetime="2021-01-28").article__day 28.01
+				a(href="#").article__content
+					h3.title Тексты типовых уставов
+					p Варианты Типовых уставов сконструированы по "классическому" образцу уставов...

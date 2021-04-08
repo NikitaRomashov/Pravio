@@ -1,0 +1,115 @@
+.specialists {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 1180px) {
+    padding-bottom: 60px;
+  }
+  @media (max-width: 972px) {
+    margin-top: 50px;
+    padding-top: 50px;
+  }
+
+  &__slider {
+    overflow: hidden;
+    .slick-list {
+      margin-left: -30px;
+    }
+
+  }
+  &__slide {
+    margin-left: 30px;
+  }
+}
+.specialist {
+  background-color: var(--color-green);
+  color: #fff;
+  width: 100%;
+  border-radius: 0px 50px 50px 50px;
+  padding: 35px 20px;
+  min-height: 384px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 130px;
+  @media (max-width: 1280px) {
+    min-height: auto;
+  }
+
+  @media (max-width: 772px) {
+    margin-bottom: 50px;
+  }
+  @media (max-width: 580px) {
+    min-height: 340px;
+  }
+  &:hover {
+    margin-bottom: 0;
+    .specialist__image {
+      margin-bottom: 0;
+      padding-top: 0;
+      min-height: 0;
+    }
+    .specialist__content {
+      height: auto;
+      padding-top: 5px;
+      padding-bottom: 20px;
+    }
+  }
+  &__link {
+    border-radius: 20px;
+    min-width: 213 / 310 * 100%;
+    display: block;
+    max-width: fit-content;
+    margin: auto auto 0;
+    @media (max-width: 580px) {
+      min-width: calc(100% - 20px);
+    }
+  }
+  &__content {
+    height: 0;
+    overflow: hidden;
+
+    li {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 15px;
+      display: flex;
+      @media (max-width: 772px) {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 5px;
+      }
+      &::before {
+        content: '';
+        flex-shrink: 0;
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin-top: 8px;
+        @media (max-width: 580px) {
+          width: 7px;
+          height: 7px;
+          margin-top: 6px;
+        }
+
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__image {
+    position: relative;
+    padding-top: 166 / 310 * 100%;
+    width: 166 / 310 * 100%;
+    margin: 0 auto 20px;
+    @media (max-width: 580px) {
+      min-width: 166px;
+      min-height: 166px;
+    }
+  }
+}

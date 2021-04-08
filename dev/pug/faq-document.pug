@@ -1,0 +1,112 @@
+extends layout/main
+
+block variables
+	-var title = 'Заказать документ'
+
+block content
+	include pages/faq/index-document
+	include pages/main/reviews
+	include pages/main/difference
+	section.category
+		.container
+			h2.title.title--align-center.title--color-bg.title--size-small.category__title Типы документов
+			.category__inner
+				h4.category__subtitle.title.title--size-tiny.title--color-green Регистрация бизнеса
+				.category__row
+					a(href="#").category__link.category__link--padding
+						span.category__text Регистрация ООО
+					a(href="#").category__link.category__link--padding
+						span.category__text Регистрация бизнеса
+					a(href="#").category__link.category__link--padding
+						span.category__text Регистрация ТСЖ
+					a(href="#").category__link.category__link--padding
+						span.category__text Учредительные документы
+					a(href="#").category__link.category__link--padding
+						span.category__text Регистрация ИП
+			.category__inner
+				h4.category__subtitle.title.title--size-tiny.title--color-green Документы в суд
+				.category__row
+					a(href="#").category__link.category__link--padding
+						span.category__text Исковое заявление
+					a(href="#").category__link.category__link--padding
+						span.category__text Подготовить жалобу на постановление по делу
+					a(href="#").category__link.category__link--padding
+						span.category__text Ходатайство
+					a(href="#").category__link.category__link--padding
+						span.category__text Отзыв или возражение на исковое заявление
+					a(href="#").category__link.category__link--padding
+						span.category__text Документы в суд
+			.category__inner
+				h4.category__subtitle.title.title--size-tiny.title--color-green Жалоба на чиновника
+				.category__row
+					a(href="#").category__link.category__link--padding
+						span.category__text Жалоба на действия должностного лица
+					a(href="#").category__link.category__link--padding
+						span.category__text Жалоба на сотрудника ГИБДД
+					a(href="#").category__link.category__link--padding
+						span.category__text Жалоба на действия судебного пристава-исполнителя
+					a(href="#").category__link.category__link--padding
+						span.category__text Жалоба на чиновника
+			.category__inner
+				h4.category__subtitle.title.title--size-tiny.title--color-green Договоры и соглашения
+				.category__row
+					a(href="#").category__link.category__link--padding
+						span.category__text Трудовой договор
+					a(href="#").category__link.category__link--padding
+						span.category__text Договор на оказание услуг
+					a(href="#").category__link.category__link--padding
+						span.category__text Договор аренды
+					a(href="#").category__link.category__link--padding
+						span.category__text Договор купли-продажи
+					a(href="#").category__link.category__link--padding
+						span.category__text Договор дарения
+					a(href="#").category__link.category__link--padding
+						span.category__text Договоры и соглашения
+			.category__inner
+				h4.category__subtitle.title.title--size-tiny.title--color-green Претензии потребителей
+				.category__row
+					a(href="#").category__link.category__link--padding
+						span.category__text Претензия на возврат денежных средств
+					a(href="#").category__link.category__link--padding
+						span.category__text Претензия в банк
+					a(href="#").category__link.category__link--padding
+						span.category__text Претензия к застройщику
+					a(href="#").category__link.category__link--padding
+						span.category__text Претензия в страховую компанию
+					a(href="#").category__link.category__link--padding
+						span.category__text Претензия к ЖКХ, управляющей компании
+					a(href="#").category__link.category__link--padding
+						span.category__text Претензии потребителя
+	section.regulations
+		.container
+			.regulations__content
+				.regulations__content-box
+					h2.regulations__title.title.title--size-small.title--color-bg Основные правила пользования онлайн-консультацией юриста
+					span.regulations__subtitle
+						+icon('arrow-down', 'regulations__subtitle-icon')
+						| Как заказать документ юристу онлайн?
+					p.regulations__text В наше время заказать документ юристу в Москве проще, чем когда-либо в истории. Хотя бы потому, что идти для этого никуда не нужно. Достаточно включить домашний ПК и найти адвоката в режиме онлайн.
+					p.regulations__text Этот способ дает возможность срочно получить необходимый документ, не тратя сил/времени на беготню по юридическим консультациям/адвокатским конторам.
+					p.regulations__text Многие граждане Москвы неуверенно чувствуют себя на правовом поле, поскольку не обладают достаточными юридическими знаниями, навыками составления официальных бумаг. На самом деле, всего этого не требуется для того, чтобы эффективно использовать правовые возможности для защиты своих интересов.
+					p.regulations__text Человек не обязан все уметь делать сам – разделение труда существует с незапамятных времен. Достаточно нанять юриста для составления документов, чтобы подготовить текст, соответствующий всем законодательным требованиям Москвы. Останется лишь отнести ее по адресу.
+				.regulations__content-box
+					span.regulations__subtitle
+						+icon('arrow-down', 'regulations__subtitle-icon')
+						| Как заказать документ юристу онлайн?
+					ul.regulations__list
+						li.regulations__list-item Зайти на сайт prav.io. Регистрация для этого не требуется.
+						li.regulations__list-item Выбрать специалиста необходимой компетенции в каталоге. Убедиться, что он онлайн.
+						li.regulations__list-item Связаться с ним, передать необходимую информацию. При необходимости специалист задаст уточняющие вопросы, попросит нужные данные.
+						li.regulations__list-item Если к заявлению/иску/претензии нужно приложить пакет документов, юрист составит их полный список, даст рекомендации по получению.
+						li.regulations__list-item По завершении работы вы получите готовый экземпляр по электронной почте.
+				.regulations__content-box
+					span.regulations__subtitle
+						+icon('arrow-down', 'regulations__subtitle-icon')
+						| Как заказать документ юристу онлайн?
+					ul.regulations__list
+						li.regulations__list-item «Виртуальный юрист» столь же надежен, как реальный. Только клиентам не нужна регистрация. Специалисты же регистрируются, представляют дипломы об образовании, проходят квалификационную проверку, получают личный аккаунт.
+						li.regulations__list-item Получить услуги на сайте можно круглосуточно. В интернете никто не работает «с девяти до пяти», как в офисах. Обеденного перерыва тоже нет.
+						li.regulations__list-item Самое выгодное – невысокая цена. В стоимость услуг «офисных юристов» заложены аренда, содержание офисов, канцелярские расходы, оплата уборщиц, офис-менеджеров, бухгалтера, охраны и т.д. На сайте вы оплачиваете только работу специалиста.
+					p.regulations__text Срочная недорогая подготовка документов юристом на портале prav.io поможет вам эффективно защитить свои права в любой инстанции.
+					p.regulations__text Корректно составленная документация – это половина успеха любого дела!
+	include pages/main/banner

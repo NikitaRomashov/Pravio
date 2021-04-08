@@ -1,0 +1,107 @@
+block variables
+
+header.header(class=headerGreen)
+  .container
+    .header__inner
+      .logo
+        a(href="index.html").logo__link
+          img(src="static/images/common/logo.svg" alt="Логотип").logo__image
+      nav.header__menu.menu
+        ul.menu__list
+          li.menu__item
+            a(href="#").menu__link Компания
+          li.menu__item
+            a(href="#").menu__link Вопросы
+          li.menu__item
+            a(href="#").menu__link Юристы
+          li.menu__item.menu__item--icon
+            a(href="#").menu__link Разделы
+            +icon('arrow-down', 'menu__item-icon')
+            .menu__dropdown(data-da="header__menu, first, 1100")
+              .menu__dropdown-row
+                .menu__dropdown-col
+                  ul.menu__dropdown-list
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('info', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Компания
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('law', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Темы права
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('law-book', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Юридические услуги
+                .menu__dropdown-col
+                  ul.menu__dropdown-list
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('question', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Все вопросы
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('paid-questions', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Платные вопросы
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('free-questions', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Бесплатные вопросы
+                .menu__dropdown-col
+                  ul.menu__dropdown-list
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('publications', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Публикации
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('company', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Гос. учреждения
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('document', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Образцы документов
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('checked', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Проверка контрагента
+                    li.menu__dropdown-item
+                      a(href="#").menu__dropdown-link
+                        +icon('courthouse', 'menu__dropdown-icon')
+                        span.menu__dropdown-text Юридические компании
+      .header__info
+        .header__phone
+          span.header__phone-text Бесплатная горячая линия
+          a(href="tel:+74954077755").header__phone-link
+            +icon('phone', 'header__phone-icon')
+            | +7 (495) 40-777-55
+        .header__icons
+          .header__user
+            button(type="button").header__user-btn
+              +icon('user', 'header__user-icon')
+            .header__user-dropdown
+              a(href="#").header__user-link Личный кабинет
+              a(href="#").header__user-link Профиль
+              a(href="#").header__user-link Чат
+              a(href="#").header__user-link Написать
+              a(href="#").header__user-link Избранное
+              a(href="#").header__user-link Выйти
+          .header__search
+            button.header__search-btn
+              +icon('search', 'header__search-icon')
+            .header__search-dropdown
+              form(action="#").header__search-form
+                input(type="text" placeholder="Поиск на сайте" required).header__search-input
+        .header__question
+          a(href="faq-asked.html").header__link.btn.btn--color-green.btn--bg-white
+            +icon('question-mark', 'btn-icon btn-icon--color-green')
+            | Задать вопрос
+          .header__question-dropdown
+            a(href="faq-consultation.html").header__question-link
+              +icon('phone', 'header__question-icon')
+              | Консультация
+            a(href="faq-document.html").header__question-link
+              +icon('document-light', 'header__question-icon')
+              | Документ
+      button.burger.burger-slip
+        span.burger-lines

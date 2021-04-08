@@ -1,0 +1,16 @@
+section.pledge-agreement
+	.container
+		.pledge-agreement__content
+			h2.title.title--size-small.title--align-center.title--color-bg.pledge-agreement__title Договор залога
+			span.title.title--size-tiny.title--align-center.title--color-gray Это рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев
+		form(action="#").pledge-agreement__form
+			.pledge-agreement__slider
+				.pledge-agreement__control
+					span.pledge-agreement__subtitle Необходимые Вам сроки
+					input(type="range" data-min="1" data-from="2" data-max="5" data-postfix=" дня").pledge-agreement__input.js-range-slider
+				.pledge-agreement__control
+					span.pledge-agreement__subtitle Цена, которая Вас устраивает
+					input(type="range" data-min="100" data-from="8000" data-step="10" data-postfix=" р" data-max="10000").pledge-agreement__input.js-range-slider
+			.pledge-agreement__box
+				textarea(placeholder="Опишите задачу, которую нужно решить при помощи Договора залога" required).pledge-agreement__textarea.textarea-green
+				button(type="submit").pledge-agreement__btn.btn.btn--size-tiny.btn--bg-green Заказать договор
